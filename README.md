@@ -1,0 +1,2 @@
+# morsechat
+django chat project
