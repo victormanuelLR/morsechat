@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-r$v&d1iq+ywg370-6@f^q!+_c-51@y3ri-2)jb1-^y0)b^6!!3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'morsechat.onrender.com', 'localhost']
 
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_REDIRECT_URL = '/rooms/'
