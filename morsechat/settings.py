@@ -87,6 +87,11 @@ CHANNEL_LAYERS = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://morsechat.onrender.com",
+]
+
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
