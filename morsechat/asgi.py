@@ -7,9 +7,6 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 
 from room import routing
 
-from dotenv import load_dotenv
-
-load_dotenv()
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'morsechat.settings')
 
