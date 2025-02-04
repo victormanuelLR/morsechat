@@ -3,27 +3,27 @@
 {% block title  %}Sign up | {% endblock %}
 
 {% block content %}
-<div class="p-10 lg:p-20 text-center">
-    <h1 class="text-3xl lg:text-6xl text-white">Sign up</h1>
-</div>
 
-<form action="." method="post" class="lg:w-1/4 px-4 mx-auto">
+<form action="." method="post" class="lg:w-1/4 px-4 mx-auto inbox m-5 p-3 rounded-xl">
+    <div class="p-3 lg:p-10 text-center">
+        <h1 class="text-3xl lg:text-5xl ">Sign up</h1>
+    </div>
     {% csrf_token %} 
 
     <div class="mb-5">
-        <label for="" class="text-white">Username</label>
+        <label for="" class="">Username</label>
 
         <input type="text" name="username" id="" class="w-full mt-2 px-4 py-2 rounded-xl">
     </div>
 
     <div class="mb-5">
-        <label for="" class="text-white">Password</label>
+        <label for="" class="">Password</label>
 
         <input type="text" name="password1" id="" class="w-full mt-2 px-4 py-2 rounded-xl">
      </div>
 
     <div class="mb-5">
-        <label for="" class="text-white">Repeat password</label>
+        <label for="" class="">Repeat password</label>
 
         <input type="text" name="password2" id="" class="w-full mt-2 px-4 py-2 rounded-xl">
      </div>

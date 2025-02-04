@@ -5,6 +5,13 @@
 
 {% block content %}
 <div class="p-10 lg:p-20 text-center">
-    <h1 class="text-3xl lg:text-6xl text-white">Morsechat</h1>
+    <h1 class="text-3xl lg:text-6xl">Morsechat</h1>
 </div>
+
+{% if request.user.is_authenticated %}
+<p>baba</p>
+{% else %}
+<p>kiki</p>
+{% endif %}
+
 {% endblock %}

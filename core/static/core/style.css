@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: #162127;
+    --primary-color: #6d4c3d;
+    --secondary-color: #634133;
+    --secondary-light-color: #A26953;
+    --nav-text-color: #DFE2DF;
+    --box-color: #D8E3E9;
+    --box-second-color: #7CA2B6;
+    --box-light-second-color:#A4BECC;
+    --chat-box-color: #a5907e;
+    --principal-font: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--principal-font);
+
+}
+
+nav {
+    background-color: var(--primary-color);
+    color: var(--nav-text-color);
+}
+
+.div-title_nav {
+    font-family: 'Lobster', 'sans-serif';
+}
+.div-title_nav > a {
+    font-size: 4rem;
+}
+.div-title_nav > img {
+    width: 200px;
+}
+
+.div-nav > .second_button {
+    background-color: var(--secondary-color);
+}
+
+.div-nav > .second_button:hover {
+    background-color: var(--secondary-light-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-box {
+    background-color: var(--box-color);
+    border-color: var(--box-second-color);
+    border-style: solid;
+    border-width: 0.1rem;
+}
+.room-box > a {
+    background-color: var(--box-second-color);
+}
+.room-box > a:hover {
+    background-color: var(--box-light-second-color);
+}
+
+.room-title {
+    width: 100%;
+    background-color: var(--chat-box-color);
+    color: var(--nav-text-color);
+    border-color: var(--primary-color);
+    border-width: 0 0.2rem 0.2rem 0.2rem;
+}
+
+.room-chat {
+    background-color: var(--chat-box-color);
+    border-color: var(--primary-color);
+    border-width: 0 0.2rem 0 0.2rem;
+}
+
+.chat-messages {
+    max-height: 54dvh;
+    overflow: auto;
+}
+.room-input-message {
+    border-radius: 0 0 15px 15px;
+    border-color: var(--primary-color);
+    border-width: 0 0.2rem 0.2rem 0.2rem;
+}
+
+.room-input-message input {
+    border-radius: 15px;
+}
+
+.room-input-message button {
+    background-color: var(--secondary-color);
+}
+.room-input-message button:hover {
+    background-color: var(--secondary-light-color);
+}
+
+.inbox {
+    background-color: var(--box-color);
+    border-color: var(--box-second-color);
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+.inbox button {
+    background-color: var(--box-second-color);
+}
+.inbox button:hover {
+    background-color: var(--box-light-second-color);
+}
+
+
+
