@@ -5,6 +5,7 @@ from asgiref.sync import sync_to_async
 from django.contrib.auth.models import User
 
 from .models import Message, Room
+from .utils import translate_to_morse_code
 
 
 class ChatConsumer(AsyncJsonWebsocketConsumer):
@@ -28,10 +29,9 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
 
     async def receive(self, text_data=None):
 
-        print("Mensagem recebida no servidor:", text_data)  # Adicione isso para depuração
 
         data = json.loads(text_data)
-        message = data['message']
+        message = translate_to_morse_code(data['message'])
         username = data['username']
         room = data['room']
 
