@@ -1,5 +1,6 @@
 from django.contrib.auth import login
 from django.shortcuts import render, redirect
+from django.utils.text import slugify
 from .forms import SignUpForm, CreateRoom
 from room.models import Room
 # Create your views here.
@@ -9,8 +10,9 @@ def principalpage(request):
         form = CreateRoom(request.POST)
         if form.is_valid():
             roomname = form.cleaned_data["roomname"]
+            slugname= slugify(roomname.lower().replace(" ", "-"), allow_unicode=True)
 
-            Room.objects.get_or_create(name=roomname, slug=roomname.lower().replace(" ", "-"))
+            Room.objects.get_or_create(name=roomname, slug=slugname)
 
             return redirect("room")
 
