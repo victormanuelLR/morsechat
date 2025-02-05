@@ -74,7 +74,7 @@ main {
     background-color: var(--chat-box-color);
     color: var(--nav-text-color);
     border-color: var(--primary-color);
-    border-width: 0 0.2rem 0.2rem 0.2rem;
+    border-width: 0 0 0.2rem 0;
 }
 
 .room-chat {

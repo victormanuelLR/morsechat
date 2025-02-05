@@ -8,10 +8,39 @@
     <h1 class="text-3xl lg:text-6xl">Morsechat</h1>
 </div>
 
-<!-- {% if request.user.is_authenticated %}
-<p>baba</p>
+{% if request.user.is_authenticated %}
+
+<form action="." method="POST" class="lg:w-1/4 px-4 mx-auto inbox m-5 p-3 rounded-xl">
+    <div class="p-10 text-center">
+        <h2 class="text-3xl ">Create room</h2>
+    </div>
+    {% csrf_token %} 
+
+    <div class="mb-5">
+        <label for="roomname" class="">Name:</label>
+
+        <input type="text" name="roomname" id="" class="w-full mt-2 px-4 py-2 rounded-xl">
+    </div>
+     {% if form.errors %}
+        {% for field in form%}
+            {% for error in field.errors %}
+                <div class="mb-5 p-4 rounded-xl bg-red-300 text-white">
+                    <p>{{ error|escape }}</p>
+                </div>
+            {% endfor %}
+        {% endfor %}
+     {% endif %}
+
+     <button class="px-5 py-3 rounded-xl text-white">Submit</button>
+</form>
 {% else %}
-<p>kiki</p>
-{% endif %} -->
+<div class="lg:w-2/4 px-4 mx-auto bg-amber-200 m-5 p-3 rounded-xl text-3xl font-bold">
+    <p>
+        Sign up for 
+        being able to see and create rooms!
+    </p>
+
+</div>
+{% endif %}
 
 {% endblock %}
